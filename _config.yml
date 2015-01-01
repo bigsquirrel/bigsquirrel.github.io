@@ -5,6 +5,7 @@ name: "ivanchou's dev life"
 markdown: kramdown
 
 author: "ivanchou"
+disqus: "ivanchou_xl"
 
 navigations:
   - title: Archive
