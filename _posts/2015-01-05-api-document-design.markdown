@@ -151,4 +151,7 @@ session_id|true|int|用户的登录标识
 ---|---|---
 |||
 
+#6.Ps
+不了解 css 的悲剧就是，不知道怎么设置边框颜色以至于插入的表格看起来很怪异，当然有个简单的方法是`cmd + a`。
+
 [restful_api]:http://www.ruanyifeng.com/blog/2014/05/restful_api.html
