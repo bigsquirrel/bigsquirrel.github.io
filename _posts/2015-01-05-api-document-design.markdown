@@ -65,6 +65,7 @@ author|object|创建该活动的用户
 start_at|string|活动开始时间
 title|string|活动的标题
 text|string|活动的详细内容
+tags|int|活动标签
 
 
 
@@ -97,6 +98,7 @@ place_at|string|活动三要素之一：地点
 text|string|活动三要素之一：详情
 thumbnail_pic|string|活动缩略图地址
 original_pic|string|活动原始图片地址
+tags|int|活动标签
 
 
 
@@ -117,6 +119,7 @@ title|true|string|活动标题
 start_at|true|string|活动三要素之一：时间
 place_at|true|string|活动三要素之一：地点
 text|true|string|活动三要素之一：详情
+tags|true|int|活动标签
 pic_path|false|string|活动配图
 session_id|true|int|用户的登录标识
 
