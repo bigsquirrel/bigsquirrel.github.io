@@ -4,6 +4,7 @@ title:  "Python 笔记"
 date:   2015-04-10 18:00:00
 tags:
     - Python
+    - note
 ---
 # 数
 三种：整数、浮点数、复数
