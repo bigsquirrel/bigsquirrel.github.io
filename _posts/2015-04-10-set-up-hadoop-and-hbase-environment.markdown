@@ -70,6 +70,22 @@ tags:
 
 # [Hbase][Hbase]
 
+### 配置:
+  conf/hbase-site.xml for **Standalone HBase**
+
+    <configuration>
+      <property>
+        <name>hbase.rootdir</name>
+        <value>file:///home/testuser/hbase</value>
+      </property>
+      <property>
+        <name>hbase.zookeeper.property.dataDir</name>
+        <value>/home/testuser/zookeeper</value>
+      </property>
+    </configuration>
+
+### 一些命令
+
   启动: 
 
     $ /bin/start-hbase.sh
