@@ -5,6 +5,7 @@ date:   2015-05-01 10:00:00
 tags:
     - bug
     - Android
+    - gradle
 ---
 碰到了这么一个编译错误
 
