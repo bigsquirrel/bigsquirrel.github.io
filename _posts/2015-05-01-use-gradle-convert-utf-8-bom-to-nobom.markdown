@@ -64,4 +64,14 @@ Google 之后得知是作死的 Windows 下 UTF-8 编码 with BOM or NOBOM 的�
 
 总算可以在 Android Studio 下码了，也不枉我折腾一个晚上加早晨。
 
+ps: 修改的代码看起来其实很奇怪，因为
+	
+	println android.sourceSets.main.java.srcDirs
+
+得到的是一个路径没错，但是被 `[]` 包裹，而 each 应该是可以遍历目录的，不太清楚为什么不可以。这里
+
+	android.sourceSets.main.java.srcDirs.each
+
+的作用是去掉 `[]`，为什么我这样做？用字符串操作不就可以达到目的吗？理论上肯定是有这样的方法，但在我 println 后得到了正确的路径实现了目的，我也不想再去找什么其他的方法替代了。
+
 [gradle_code]:http://stackoverflow.com/questions/17084727/disable-encoding-checking-in-java-gradle-project
