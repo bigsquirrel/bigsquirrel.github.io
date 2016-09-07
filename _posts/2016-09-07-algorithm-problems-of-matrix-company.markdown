@@ -35,21 +35,22 @@ tags:
 	    }
 
 	    public int solve(int m) {
-	        if (m <=1 || m>=65536) {
+	        if (m <= 1 || m >= 65536) {
 	            return -1;
 	        }
-	        int[] arr = new int[m+1];
+	        int[] arr = new int[m + 1];
 	        arr[0] = arr[1] = 0;
 	        for (int i = 2; i <= m; i++) {
 	            if (i % 2 == 0) {
-	                arr[i] = arr[i/2] + 1;
+	                arr[i] = arr[i / 2] + 1;
 	            } else {
-	                arr[i] = arr[i-1] + 1;
+	                arr[i] = arr[i - 1] + 1;
 	            }
 	        }
 	        return arr[m];
 	    }
 	}
+
 
 ### 2. 矩阵输出
 给定一个二维数组，请将其中的元素按 Z 字形打印出来。
@@ -76,7 +77,7 @@ tags:
 	        int n = in.nextInt();
 	        int[][] arr = new int[m][n];
 	        while (in.hasNext()) {
-	            for (int i = 0; i < m ; i++) {
+	            for (int i = 0; i < m; i++) {
 	                for (int j = 0; j < n; j++) {
 	                    arr[i][j] = in.nextInt();
 	                }
@@ -93,65 +94,63 @@ tags:
 	        int right = 1;
 	        int m = nums.length;
 	        int n = nums[0].length;
-	        int[] arr = new int[m*n];
+	        int[] arr = new int[m * n];
 	        dir = right;
-	        int a= 0 , b =0;
-	        for (int i = 0 ; i < m *n; i++) {
+	        int a = 0, b = 0;
+	        for (int i = 0; i < m * n; i++) {
 	            arr[i] = nums[a][b];
 	            if (dir == right) {
-	                if (a== 0 && b+1 != n-1) {
+	                if (a == 0 && b + 1 != n - 1) {
 	                    b++;
 	                    dir = leftdown;
-	                } else if (a == m-1 && b+1!=n-1){
+	                } else if (a == m - 1 && b + 1 != n - 1) {
 	                    b++;
 	                    dir = rightup;
 	                }
-	            }
-	            else if (dir == leftdown) {
-	                if (a+1 < m-1 && b -1 > 0) {
+	            } else if (dir == leftdown) {
+	                if (a + 1 < m - 1 && b - 1 > 0) {
 	                    a++;
 	                    b--;
 	                    dir = leftdown;
-	                } else if (a+1 ==m-1 && b-1 >=0) {
+	                } else if (a + 1 == m - 1 && b - 1 >= 0) {
 	                    b--;
 	                    a++;
 	                    dir = right;
-	                } else if (a+1 < m-1 && b-1 ==0){
+	                } else if (a + 1 < m - 1 && b - 1 == 0) {
 	                    a++;
 	                    b--;
 	                    dir = down;
 	                }
-	            }
-	            else if (dir == down) {
+	            } else if (dir == down) {
 	                if (b == 0) {
 	                    a++;
 	                    dir = rightup;
-	                } else if (b == n-1) {
+	                } else if (b == n - 1) {
 	                    a++;
 	                    dir = leftdown;
 	                }
-	            }
-	            else if (dir == rightup) {
-	                if (a-1 >0 && b+1 < n-1) {
+	            } else if (dir == rightup) {
+	                if (a - 1 > 0 && b + 1 < n - 1) {
 	                    a--;
 	                    b++;
 	                    dir = rightup;
-	                } else if (a-1 == 0 && b+1 < n-1){
+	                } else if (a - 1 == 0 && b + 1 < n - 1) {
 	                    a--;
 	                    b++;
 	                    dir = right;
-	                } else if (a-1 >=0 && b+1 == n-1) {
+	                } else if (a - 1 >= 0 && b + 1 == n - 1) {
 	                    a--;
 	                    b++;
 	                    dir = down;
 	                }
 	            }
 	        }
-	        for (int i = 0; i < m*n; i++) {
-	                System.out.print(arr[i] + " ");
+	        for (int i = 0; i < m * n; i++) {
+	            System.out.print(arr[i] + " ");
 	        }
 	    }
 	}
+
 
 
 可惜的是第二题时间不够，最后没有调试出来。仅作记录之用，如有侵权，请联系我。
