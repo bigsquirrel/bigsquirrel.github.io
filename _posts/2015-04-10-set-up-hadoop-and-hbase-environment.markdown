@@ -53,7 +53,7 @@ tags:
 
   复制文件到分布式文件系统:
 
-    $ bin/hadoop fs -put <localsrc> ... <dst>
+    $ bin/hadoop dfs -put <localsrc> ... <dst>
 
   从分布式文件系统拷贝文件到本地:
 
@@ -101,6 +101,8 @@ tags:
   Shell 命令: 
     
     list, scan 'TableName', disable 'TableName', drop 'TableName'
+
+    echo "scan 'TableName'" | bin/hbase shell > output
 
 [Hadoop1]:https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
 [Hadoop2]:http://hadoop.apache.org/docs/r1.0.4/cn/hdfs_shell.html
